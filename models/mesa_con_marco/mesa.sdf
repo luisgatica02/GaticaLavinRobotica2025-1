@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="mesa_con_marco">
+    <static>true</static>
+    <link name="table_link">
+      
+      <!-- Superficie de la mesa -->
+      <visual name="table_top">
+        <geometry>
+          <box>
+            <!-- Ajustar dimensiones: Largo x Ancho x Grosor -->
+            <size>1.5 0.8 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.6 0.4 0.2 1</ambient>
+          <diffuse>0.6 0.4 0.2 1</diffuse>
+        </material>
+        <!-- Ajustar la altura de la superficie de la mesa -->
+        <pose>0 0 0.85 0 0 0</pose>
+      </visual>
+      
+      <!-- Pata 1 -->
+      <visual name="leg1">
+        <geometry>
+          <box>
+            <!-- Ajustar grosor y altura de las patas -->
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <pose>-0.7 -0.35 0.4 0 0 0</pose>
+      </visual>
+      
+      <!-- Pata 2 -->
+      <visual name="leg2">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <pose>0.7 -0.35 0.4 0 0 0</pose>
+      </visual>
+      
+      <!-- Pata 3 -->
+      <visual name="leg3">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <pose>-0.7 0.35 0.4 0 0 0</pose>
+      </visual>
+      
+      <!-- Pata 4 -->
+      <visual name="leg4">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <pose>0.7 0.35 0.4 0 0 0</pose>
+      </visual>
+      
+      <!-- Marco vertical en las esquinas -->
+      
+      <!-- Columna 1 -->
+      <visual name="columna1">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>-0.7 -0.35 1.5 0 0 0</pose>
+      </visual>
+      
+      <!-- Columna 2 -->
+      <visual name="columna2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>0.7 -0.35 1.5 0 0 0</pose>
+      </visual>
+      
+      <!-- Columna 3 -->
+      <visual name="columna3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>-0.7 0.35 1.5 0 0 0</pose>
+      </visual>
+      
+      <!-- Columna 4 -->
+      <visual name="columna4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>0.7 0.35 1.5 0 0 0</pose>
+      </visual>
+      
+      <!-- Vigas horizontales para conectar las columnas -->
+      
+      <!-- Viga frontal -->
+      <visual name="viga_frontal">
+        <geometry>
+          <box>
+            <size>1.5 0.05 0.05</size>
+          </box>
+        </geometry>
+        <pose>0 0.35 2.2 0 0 0</pose>
+      </visual>
+      
+      <!-- Viga trasera -->
+      <visual name="viga_trasera">
+        <geometry>
+          <box>
+            <size>1.5 0.05 0.05</size>
+          </box>
+        </geometry>
+        <pose>0 -0.35 2.2 0 0 0</pose>
+      </visual>
+      
+      <!-- Viga lateral izquierda -->
+      <visual name="viga_izquierda">
+        <geometry>
+          <box>
+            <size>0.05 0.8 0.05</size>
+          </box>
+        </geometry>
+        <pose>-0.7 0 2.2 0 0 0</pose>
+      </visual>
+      
+      <!-- Viga lateral derecha -->
+      <visual name="viga_derecha">
+        <geometry>
+          <box>
+            <size>0.05 0.8 0.05</size>
+          </box>
+        </geometry>
+        <pose>0.7 0 2.2 0 0 0</pose>
+      </visual>
+      
+    </link>
+  </model>
+</sdf>
