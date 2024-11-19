@@ -1,0 +1,316 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='mesa_completa_con_cilindros'>
+      <static>1</static>
+      <link name='table_link'>
+        <visual name='table_top'>
+          <geometry>
+            <box>
+              <size>1.5 0.8 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+          </material>
+          <pose>0 0 0.85 0 -0 0</pose>
+        </visual>
+        <visual name='leg1'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+          </material>
+          <pose>-0.7 -0.35 0.4 0 -0 0</pose>
+        </visual>
+        <visual name='leg2'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+          </material>
+          <pose>0.7 -0.35 0.4 0 -0 0</pose>
+        </visual>
+        <visual name='leg3'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+          </material>
+          <pose>-0.7 0.35 0.4 0 -0 0</pose>
+        </visual>
+        <visual name='leg4'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.8</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+          </material>
+          <pose>0.7 0.35 0.4 0 -0 0</pose>
+        </visual>
+        <visual name='columna1'>
+          <geometry>
+            <box>
+              <size>0.05 0.05 1.4</size>
+            </box>
+          </geometry>
+          <pose>-0.7 -0.35 1.5 0 -0 0</pose>
+        </visual>
+        <visual name='columna2'>
+          <geometry>
+            <box>
+              <size>0.05 0.05 1.4</size>
+            </box>
+          </geometry>
+          <pose>0.7 -0.35 1.5 0 -0 0</pose>
+        </visual>
+        <visual name='columna3'>
+          <geometry>
+            <box>
+              <size>0.05 0.05 1.4</size>
+            </box>
+          </geometry>
+          <pose>-0.7 0.35 1.5 0 -0 0</pose>
+        </visual>
+        <visual name='columna4'>
+          <geometry>
+            <box>
+              <size>0.05 0.05 1.4</size>
+            </box>
+          </geometry>
+          <pose>0.7 0.35 1.5 0 -0 0</pose>
+        </visual>
+        <visual name='barra_frontal'>
+          <geometry>
+            <box>
+              <size>1.5 0.05 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+          </material>
+          <pose>0 0.35 2.2 0 -0 0</pose>
+        </visual>
+        <visual name='barra_trasera'>
+          <geometry>
+            <box>
+              <size>1.5 0.05 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+          </material>
+          <pose>0 -0.35 2.2 0 -0 0</pose>
+        </visual>
+        <visual name='barra_lateral_izquierda'>
+          <geometry>
+            <box>
+              <size>0.05 0.8 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+          </material>
+          <pose>-0.7 0 2.2 0 -0 0</pose>
+        </visual>
+        <visual name='barra_lateral_derecha'>
+          <geometry>
+            <box>
+              <size>0.05 0.8 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+          </material>
+          <pose>0.7 0 2.2 0 -0 0</pose>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='base_link'>
+        <visual name='base_visual'>
+          <geometry>
+            <box>
+              <size>0.3 0.3 0.05</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+          </material>
+          <pose>0 0 0.9 0 -0 0</pose>
+        </visual>
+        <visual name='cylinder_1'>
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.2 0.6 0.3 1</ambient>
+          </material>
+          <pose>-0.1 0 0.925 0 -0 0</pose>
+        </visual>
+        <visual name='cylinder_2'>
+          <geometry>
+            <cylinder>
+              <radius>0.02</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.2 0.6 0.3 1</ambient>
+          </material>
+          <pose>0.1 0 0.925 0 -0 0</pose>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>1.61061 -2.50719 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>540 315000000</sim_time>
+      <real_time>728 940229718</real_time>
+      <wall_time>1731988829 779835309</wall_time>
+      <iterations>540315</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='mesa_completa_con_cilindros'>
+        <pose>1.61061 -2.50719 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>1.61061 -2.50719 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='table_link'>
+          <pose>1.61061 -2.50719 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>7.8915 -7.12643 3.70612 0 0.275643 2.35619</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>

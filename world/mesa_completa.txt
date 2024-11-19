@@ -1,0 +1,4 @@
+Mesa hecha en Un archivo .sdf (Simulation Description Format) se utiliza en Gazebo para describir modelos.
+Realizado por:
+López Jaramillo Sebastián
+Gatica Lavin Luis Pedro

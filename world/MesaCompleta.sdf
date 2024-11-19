@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="mesa_completa_con_cilindros">
+    <static>true</static>
+
+    <!-- Mesa -->
+    <link name="table_link">
+      <!-- Superficie de la mesa -->
+      <visual name="table_top">
+        <geometry>
+          <box>
+            <size>1.5 0.8 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+        </material>
+        <pose>0 0 0.85 0 0 0</pose>
+      </visual>
+
+      <!-- Patas de la mesa -->
+      <visual name="leg1">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <pose>-0.7 -0.35 0.4 0 0 0</pose>
+      </visual>
+
+      <visual name="leg2">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <pose>0.7 -0.35 0.4 0 0 0</pose>
+      </visual>
+
+      <visual name="leg3">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <pose>-0.7 0.35 0.4 0 0 0</pose>
+      </visual>
+
+      <visual name="leg4">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.8</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+        <pose>0.7 0.35 0.4 0 0 0</pose>
+      </visual>
+
+      <!-- Columnas verticales -->
+      <visual name="columna1">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>-0.7 -0.35 1.5 0 0 0</pose>
+      </visual>
+
+      <visual name="columna2">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>0.7 -0.35 1.5 0 0 0</pose>
+      </visual>
+
+      <visual name="columna3">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>-0.7 0.35 1.5 0 0 0</pose>
+      </visual>
+
+      <visual name="columna4">
+        <geometry>
+          <box>
+            <size>0.05 0.05 1.4</size>
+          </box>
+        </geometry>
+        <pose>0.7 0.35 1.5 0 0 0</pose>
+      </visual>
+
+      <!-- Barras horizontales en la parte superior -->
+      <visual name="barra_frontal">
+        <geometry>
+          <box>
+            <size>1.5 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+        </material>
+        <pose>0 0.35 2.2 0 0 0</pose>
+      </visual>
+
+      <visual name="barra_trasera">
+        <geometry>
+          <box>
+            <size>1.5 0.05 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+        </material>
+        <pose>0 -0.35 2.2 0 0 0</pose>
+      </visual>
+
+      <visual name="barra_lateral_izquierda">
+        <geometry>
+          <box>
+            <size>0.05 0.8 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+        </material>
+        <pose>-0.7 0 2.2 0 0 0</pose>
+      </visual>
+
+      <visual name="barra_lateral_derecha">
+        <geometry>
+          <box>
+            <size>0.05 0.8 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+        </material>
+        <pose>0.7 0 2.2 0 0 0</pose>
+      </visual>
+    </link>
+
+    <!-- Base con cilindros encima -->
+    <link name="base_link">
+      <visual name="base_visual">
+        <geometry>
+          <box>
+            <size>0.3 0.3 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.5 0.5 0.5 1</ambient>
+        </material>
+        <pose>0 0 0.9 0 0 0</pose>
+      </visual>
+
+      <!-- Cilindros -->
+      <visual name="cylinder_1">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.2 0.6 0.3 1</ambient>
+        </material>
+        <pose>-0.1 0 0.925 0 0 0</pose>
+      </visual>
+      <visual name="cylinder_2">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.1</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.2 0.6 0.3 1</ambient>
+        </material>
+        <pose>0.1 0 0.925 0 0 0</pose>
+      </visual>
+    </link>
+  </model>
+</sdf>
